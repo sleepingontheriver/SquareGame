@@ -1,5 +1,7 @@
 const character = document.getElementById("character")
 const goal = document.getElementById("goal")
+const text = document.getElementById("text")
+
 
 let PlayerSquare  = new Object
 
@@ -71,8 +73,9 @@ function draw() {
 }
 
 function checkWon(){
-    if((PlayerSquare.x in [370,430]) && (PlayerSquare.y in [370,430])){
+    if(PlayerSquare.x > 370 && PlayerSquare.x < 430 && PlayerSquare.y > 370 && PlayerSquare.x < 430){
         console.log("You reached the goal!")
+        text.innerHTML = "You win!"
     }
 }
 
