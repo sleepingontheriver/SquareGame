@@ -1,0 +1,12 @@
+* {
+    background-color: cornsilk;
+}
+
+#character{   
+    background-image: url(Red_Square.jpeg);
+    height: 50px;
+    width: 50px;
+    position: relative;
+    margin-top: 100px;
+    border: solid 3px;
+}
