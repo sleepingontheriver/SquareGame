@@ -1,4 +1,5 @@
 const character = document.getElementById("character")
+const goal = document.getElementById("goal")
 
 let PlayerSquare  = new Object
 
@@ -65,16 +66,22 @@ function update(progress) {
     // Update the state of the world for the elapsed time since last render
   }
   
-  function draw() {
+function draw() {
     Draw_Player()
-  }
-  
+}
+
+function checkWon(){
+    if((PlayerSquare.x in [370,430]) && (PlayerSquare.y in [370,430])){
+        console.log("You reached the goal!")
+    }
+}
+
 function loop(timestamp) {
     var progress = timestamp - lastRender
   
     update(progress)
     draw()
-  
+    checkWon()
     lastRender = timestamp
     window.requestAnimationFrame(loop)
 }
