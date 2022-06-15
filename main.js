@@ -73,7 +73,7 @@ function draw() {
 }
 
 function checkWon(){
-    if(PlayerSquare.x > 370 && PlayerSquare.x < 430 && PlayerSquare.y > 370 && PlayerSquare.x < 430){
+    if(PlayerSquare.x > 345 && PlayerSquare.x < 430 && PlayerSquare.y > 400 && PlayerSquare.x < 490){
         console.log("You reached the goal!")
         text.innerHTML = "You win!"
     }
